@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.87);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  background-color: var(--surface-b);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.p-inputtext {
+  text-align: start;
+  width: 100%;
+  background-color: #40196f !important;
+  border: 2px solid #40196f;
+}
+
+.p-radiobutton .p-radiobutton-box {
+  background: #40196f !important;
+}
+.p-radiobutton-icon {
+  background-color: #562195;
+}
+
+hr {
+  border: 0.2px solid #a037ff;
+}
+
+.p-dropdown {
+  background-color: #40196f;
+}
+
+.p-dropdown-panel {
+  background-color: #40196f;
+}
+
+.p-checkbox .p-checkbox-box {
+  background-color: #40196f;
+}
+
+.pad {
+  padding: 5px 0 5px 0;
+}
+
+.pad-2 {
+  padding: 15px 0 5px 0;
+}
+
+.p-checkbox .p-checkbox-box .p-checkbox-icon {
+  transition-duration: 0.2s;
+  color: #be61ff;
+  font-size: 14px;
+}
+
+.p-button {
+  background: #8231e1;
+  border: none; 
+  color: #fff;
+}
+
+.p-toast .p-toast-message.p-toast-message-success {
+  background: #40196f;
+  border: solid #8231e1;
+  border-width: 0 0 0 6px;
+  color: #FFF;
+}
+
+.p-toast-message-icon, .p-toast-icon-close {
+  color: #aa7ce1
+}

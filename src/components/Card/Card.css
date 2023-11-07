@@ -1,0 +1,10 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    width: 60%;
+    height: 80%;
+    background-color: rgba(36, 37, 46, .3);
+    backdrop-filter: blur(16px);
+    font-family: 'Poppins', sans-serif;
+}
