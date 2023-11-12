@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import './App.css'
 import Card from './components/Card/Card';
 import { Toast } from 'primereact/toast';
+import Planet from './components/Planet/Planet';
 var enviar;
 function App() {
   const toast = useRef(null)
@@ -17,7 +18,7 @@ function App() {
           <Card title="Faça seu Cadastro" type={1} />
         </div>
         <div className="image-section">
-
+          <Planet />
         </div>
 
       </div>

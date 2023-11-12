@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import './Card.css'
 import VanillaTilt from 'vanilla-tilt';
 import { InputText } from "primereact/inputtext";
@@ -44,6 +44,10 @@ function Card({ title, type }) {
         setTextArea('')
     }
 
+    useEffect(() => {
+        setSex("X")
+        setSex('')
+    }, []);
     return (
         <div className='card'>
 
@@ -52,11 +56,13 @@ function Card({ title, type }) {
                 <div className="card-container">
                     <div className="card-title">
                         <h1 style={{ textAlign: 'center' }}>{title}</h1>
-                        <hr style={{marginTop: "-22px"}} />
+                        <hr style={{ marginTop: "-22px" }} />
                         <br />
                     </div>
                     <div className="card-inputs">
-                        <div className='flex flex-row gap-2'>
+                    <label style={{ textAlign: "start", color: "#dcd6e3", fontFamily: 'Poppins, sans-serif' }}>Nome Completo</label>
+                        <div className='flex flex-row gap-2'>   
+                        
                             <InputText placeholder="Nome" value={text} onChange={(e) => setText(e.target.value)} />
                             <InputText placeholder="Sobrenome" value={textName} onChange={(e) => setTextName(e.target.value)} />
                         </div>
@@ -79,21 +85,22 @@ function Card({ title, type }) {
                         
                         <div className='flex flex-column'>
                             <label style={{ textAlign: "start", color: "#dcd6e3", fontFamily: 'Poppins, sans-serif' }}>Estado</label>
-                            <Dropdown value={selectedCity} onChange={(e) => setSelectedCity(e.value)} options={cities} optionLabel="name"
+                            <Dropdown value={selectedCity} onChange={(e) => setSelectedCity(e.value)} options={cities}
                                 placeholder="Selecione um Estado" className="w-full " />
                         </div>
+                        <div className='flex flex-column pad-2'>
+                        <label style={{ textAlign: "start", color: "#dcd6e3", fontFamily: 'Poppins, sans-serif' }}>Sobre Você</label>
+                            <InputTextarea autoResize value={textArea} onChange={(e) => setTextArea(e.target.value)} placeholder="Meu nome é abu e eu abu e abu" rows={3} cols={30} />
+                        </div>
                         <div className='flex flex-row pad-2'>
-                            <Checkbox name="checkbox" onChange={e => setChecked(e.checked)} checked={checked} optionLabel></Checkbox>
+                            <Checkbox name="checkbox" onChange={e => setChecked(e.checked)} checked={checked}></Checkbox>
                             <label htmlFor="checkbox" className="ml-2">Li e aceito os termos</label>
                         </div>
-                        <div className='flex'>
-                            <InputTextarea autoResize value={textArea} onChange={(e) => setTextArea(e.target.value)} rows={3} cols={30} />
-                        </div>
+
                         <div className='flex flex-row justify-content-center align-items-end pad-2 gap-2'>
                             <Button label="Enviar" onClick={() => gambiarra()}></Button>
                             <Button label="Limpar" onClick={() => limpar()}></Button>
                         </div>
-
                     </div>
                 </div>
             ) : (

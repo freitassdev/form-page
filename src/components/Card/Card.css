@@ -8,3 +8,9 @@
     backdrop-filter: blur(16px);
     font-family: 'Poppins', sans-serif;
 }
+
+@media (max-height: 700px) {
+    .card {
+        height: 90%;
+    }
+}

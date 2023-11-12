@@ -1,4 +1,7 @@
-
+.app {
+  display: flex;
+  flex-direction: row;
+}
 
 .logo {
   height: 6em;
@@ -44,8 +47,17 @@
   align-items: center;
   height: 100vh;
   width: 50vw;
+  min-width: 50vw;
   background-image: url(https://images.unsplash.com/photo-1677297680113-d508d9d01eee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDN8fHxlbnwwfHx8fHw%3D&w=1000&q=80);
   background-repeat: no-repeat;
   background-size: cover;
   backdrop-filter: blur(10px);
 }
+
+.image-section {
+  background-color: #160033;
+  background-image: url(https://opengameart.org/sites/default/files/bg_space_seamless_fl2.png);
+  width: 50vw;
+  border-left: 3.5px solid #cf9aff;
+}
+
