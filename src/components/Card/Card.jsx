@@ -90,7 +90,7 @@ function Card({ title, type }) {
                         </div>
                         <div className='flex flex-column pad-2'>
                         <label style={{ textAlign: "start", color: "#dcd6e3", fontFamily: 'Poppins, sans-serif' }}>Sobre Você</label>
-                            <InputTextarea autoResize value={textArea} onChange={(e) => setTextArea(e.target.value)} placeholder="Meu nome é abu e eu abu e abu" rows={3} cols={30} />
+                            <InputTextarea autoResize value={textArea} onChange={(e) => setTextArea(e.target.value)} placeholder="Descrição" rows={3} cols={30} />
                         </div>
                         <div className='flex flex-row pad-2'>
                             <Checkbox name="checkbox" onChange={e => setChecked(e.checked)} checked={checked}></Checkbox>

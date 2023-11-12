@@ -20,7 +20,9 @@ function App() {
         <div className="image-section">
           <Planet />
         </div>
-
+        <div className="copy">
+          <p>©2023 - Michel & Vinicius</p>
+        </div>
       </div>
     </>
   )
