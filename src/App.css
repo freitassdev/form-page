@@ -61,3 +61,16 @@
   border-left: 3.5px solid #cf9aff;
 }
 
+@media (max-width: 600px) {
+  
+  .app {
+    flex-direction: column;
+  }
+  .card-section {
+    width: 100%;
+  }
+  .image-section {
+    width: 100%;
+    border: none;
+  }
+}

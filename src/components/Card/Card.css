@@ -14,3 +14,9 @@
         height: 90%;
     }
 }
+
+@media (max-width: 600px) {
+    .card {
+        width: 80%;
+    }
+}
