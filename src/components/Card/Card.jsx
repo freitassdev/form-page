@@ -15,7 +15,7 @@ function Card({ title, type }) {
         glare: false,
         "max-glare": 0.1
     })
-    const [selectedCity, setSelectedCity] = useState(null);
+    const [selectedCity, setSelectedCity] = useState();
     const cities = [
         { name: 'São Paulo - SP', code: 'SP' },
         { name: 'Acre - AC', code: 'AC' },
@@ -86,7 +86,8 @@ function Card({ title, type }) {
                         <div className='flex flex-column'>
                             <label style={{ textAlign: "start", color: "#dcd6e3", fontFamily: 'Poppins, sans-serif' }}>Estado</label>
                             <Dropdown value={selectedCity} onChange={(e) => setSelectedCity(e.value)} options={cities}
-                                placeholder="Selecione um Estado" className="w-full " />
+                                placeholder="Selecione um Estado" className="w-full "  optionValue="code"
+                                optionLabel="name" />
                         </div>
                         <div className='flex flex-column pad-2'>
                         <label style={{ textAlign: "start", color: "#dcd6e3", fontFamily: 'Poppins, sans-serif' }}>Sobre Você</label>
